@@ -5,7 +5,7 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final bool isSecret;
 
-  const CustomTextField({
+  CustomTextField({
     super.key,
     required this.icon,
     required this.label,
@@ -41,7 +41,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                         isObscure = !isObscure;
                       });
                     },
-                    icon: const Icon(Icons.visibility),
+                    icon: Icon(
+                        isObscure ? Icons.visibility : Icons.visibility_off),
                   )
                 : null,
             labelText: widget.label,
