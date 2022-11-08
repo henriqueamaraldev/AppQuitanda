@@ -5,7 +5,7 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final bool isSecret;
 
-  CustomTextField({
+  const CustomTextField({
     super.key,
     required this.icon,
     required this.label,
