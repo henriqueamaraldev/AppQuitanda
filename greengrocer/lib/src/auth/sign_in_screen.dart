@@ -17,50 +17,9 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // App's name
-                Text.rich(
-                  TextSpan(
-                    style: const TextStyle(
-                      fontSize: 40,
-                    ),
-                    children: [
-                      const TextSpan(
-                        text: 'Green',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextSpan(
-                        text: 'grocer',
-                        style:
-                            TextStyle(color: CustomColors.customContrastColor),
-                      ),
-                    ],
-                  ),
+                Image.network(
+                  'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/45615963-64a0-48ad-9f93-9353417ce1ef/logo-no-bg.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221109T013416Z&X-Amz-Expires=86400&X-Amz-Signature=cb6789289438b1d97ec1c361d92410e2e023441412343a991405f03e6ad63115&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22logo-no-bg.png%22&x-id=GetObject',
                 ),
-
-                // Categories
-                SizedBox(
-                  height: 30,
-                  child: DefaultTextStyle(
-                    style: const TextStyle(
-                      fontSize: 25,
-                    ),
-                    child: AnimatedTextKit(
-                      repeatForever: true,
-                      pause: Duration.zero,
-                      animatedTexts: [
-                        FadeAnimatedText('Frutas'),
-                        FadeAnimatedText('Verduras'),
-                        FadeAnimatedText('Legumes'),
-                        FadeAnimatedText('Carnes'),
-                        FadeAnimatedText('Cereais'),
-                        FadeAnimatedText('Laticíneos'),
-                      ],
-                    ),
-                  ),
-                )
               ],
             ),
           ),
