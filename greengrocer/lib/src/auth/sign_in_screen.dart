@@ -1,8 +1,7 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/auth/components/custom_text_field.dart';
 import 'package:greengrocer/src/auth/components/sign_up_screen.dart';
-import 'package:greengrocer/src/config/custom_colors.dart';
+import 'package:greengrocer/src/config/custom_theme.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomColors.customSwatchColor,
+      backgroundColor: CustomTheme.secondary,
       body: Column(
         children: [
           Expanded(
@@ -78,7 +77,7 @@ class SignInScreen extends StatelessWidget {
                       child: Text(
                         'Forgot password?',
                         style: TextStyle(
-                          color: CustomColors.customContrastColor,
+                          color: CustomTheme.details,
                         ),
                       ),
                     ),
@@ -91,7 +90,7 @@ class SignInScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Divider(
-                            color: Colors.grey.withAlpha(90),
+                            color: CustomTheme.details,
                             thickness: 2,
                           ),
                         ),
@@ -101,7 +100,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         Expanded(
                           child: Divider(
-                            color: Colors.grey.withAlpha(90),
+                            color: CustomTheme.details,
                             thickness: 2,
                           ),
                         ),
@@ -117,9 +116,9 @@ class SignInScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
-                          side: const BorderSide(
+                          side: BorderSide(
                             width: 2,
-                            color: Colors.green,
+                            color: CustomTheme.primary,
                           )),
                       onPressed: () {
                         Navigator.of(context).push(
