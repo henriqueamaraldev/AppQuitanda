@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/auth/components/custom_text_field.dart';
+import 'package:greengrocer/src/auth/components/sign_up_screen.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -87,7 +88,7 @@ class SignInScreen extends StatelessWidget {
                   // Password input
                   const CustomTextField(
                     icon: Icons.lock,
-                    label: 'Senha',
+                    label: 'Password',
                     isSecret: true,
                   ),
 
@@ -102,7 +103,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                       onPressed: () {},
                       child: const Text(
-                        'Entrar',
+                        'Login',
                         style: TextStyle(
                           fontSize: 18,
                         ),
@@ -116,7 +117,7 @@ class SignInScreen extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Esqueceu a senha?',
+                        'Forgot password?',
                         style: TextStyle(
                           color: CustomColors.customContrastColor,
                         ),
@@ -137,7 +138,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: Text('Ou'),
+                          child: Text('Or'),
                         ),
                         Expanded(
                           child: Divider(
@@ -161,9 +162,17 @@ class SignInScreen extends StatelessWidget {
                             width: 2,
                             color: Colors.green,
                           )),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (c) {
+                              return SignUpScreen();
+                            },
+                          ),
+                        );
+                      },
                       child: const Text(
-                        'Criar conta',
+                        'Create account',
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
